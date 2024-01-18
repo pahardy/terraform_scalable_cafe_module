@@ -54,7 +54,7 @@ resource "aws_launch_configuration" "aws_launch_config_cafe" {
   image_id      = var.cafe-ami
   instance_type = var.instance_type
   security_groups = [aws_security_group.sg_cafe.id]
-  user_data = file("../../../app1-install.sh")
+  user_data = file("app1-install.sh")
 
   lifecycle {
     create_before_destroy = true
